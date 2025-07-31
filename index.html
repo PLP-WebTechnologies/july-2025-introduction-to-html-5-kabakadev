@@ -11,37 +11,54 @@
   </head>
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    <header>
-      <h1>Welcome to my semantic page</h1>
-      <nav>
+    <header role="banner">
+      <h1>Welcome to my accessible semantic page</h1>
+      <nav aria-label="Primary navigation">
         <ul>
-          <li><a href="#main">Home </a></li>
+          <li><a href="#main-content">Home </a></li>
           <li><a href="#about"> About</a></li>
+          <li><a href="#services">Services</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
 
-    <main id="main">
-      <section id="about">
-        <h2>About this page</h2>
+    <main id="main-content">
+      <article>
+        <h2>Understanding Semantic HTML</h2>
         <p>
-          This page uses HTML5 semantic tags for accessibility and SEO
-          optimization
+          SemanticHTML provides meaning to web content, improving accessibility
+          and SEO.
         </p>
-      </section>
+        <section id="about" aria-labelledby="about-heading">
+          <h3 id="about-heading">About Semantic Markup</h3>
+          <p>
+            Properly structured HTML helps assistive technologies interpret page
+            content. Key elements include:
+          </p>
+          <ul>
+            <li><strong>Header</strong> - Introductory content</li>
+            <li><strong>Nav</strong> - Navigation links</li>
+            <li><strong>Main</strong> - Primary content</li>
+            <li><strong>Article</strong> - Self-contained composition</li>
+          </ul>
+        </section>
 
-      <section id="contact">
-        <h2>Contact</h2>
-        <p>
-          You can reach me at
-          <a href="mailto:iankabaka1@gmail.com">email Ian</a>
-        </p>
-      </section>
+        <section id="contact" aria-labelledby="services-heading">
+          <h3 id="contact-heading">Contact Information</h3>
+          <address>
+            Reach me at:
+            <a href="mailto:iankabaka1@gmail.com" aria-label="Email Ian Kabaka"
+              >iankabaka1@gmail.com</a
+            >
+          </address>
+        </section>
+      </article>
     </main>
 
-    <footer>
+    <footer role="contentinfo">
       <p>&copy; 2025 Ian. All rights reserved</p>
+      <p>Built with semantic HTML5</p>
     </footer>
   </body>
 </html>
